@@ -1,0 +1,10 @@
+streamlit
+boto3
+yagmail
+reportlab
+pillow
+premailer
+lxml
+cssselect
+cssutils
+requests
