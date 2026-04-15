@@ -1,0 +1,14 @@
+[Unit]
+Description=CloudGuard AWS Security Dashboard
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/CloudGuard
+Environment="HOME=/home/ubuntu"
+ExecStart=/home/ubuntu/CloudGuard/venv/bin/streamlit run dashboard/app.py --server.port 8501 --server.address 0.0.0.0 --server.headless true
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
